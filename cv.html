@@ -6,9 +6,9 @@
     <title>Felix's CV</title>
   </head>
   <style> 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
   h2 {
     font-size: 30px;
     color: #3a4364;
@@ -20,6 +20,9 @@
   h4 {
     font-size: 17px;
     color:#3a4364;
+  }
+  a {
+    text-transform: lowercase;
   }
 
   body{
@@ -48,6 +51,11 @@
   #cont {
     margin-top: 10px;
   }
+  #key-skill{
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 15px;
+  }
 
   #second-container {
     text-transform: capitalize;
@@ -62,9 +70,20 @@
     flex-direction: column;
     justify-content:space-between;
   }
-  #experience-box {
+  #experience-box, #familiar-box {
     display: flex;
     justify-content:flex-start;
+  }
+  #fam-cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:#3a4364;
+    justify-content: space-evenly;
+  }
+  #fam-cont p{ 
+    margin-left:20px;
+    margin-right:20px;
   }
 
   #badge {
@@ -114,7 +133,7 @@
     width: 10px;
     background-color: #cacaca;
     margin: 3px;
-    
+
   }
   .bar-cont {
     display:flex;
@@ -128,125 +147,162 @@
   hr {
     width: 100%;
   }
+  @media only screen and (max-width:600px){
+    #first-container, #second-container{
+      flex-direction: column;
+    }
+    #left-box {
+      max-width: 100%;
+    }
+    #left-section{
+      margin-bottom: 35px
+    }
+  }
 
   </style>
   <body>
     <div id='first-container'>
       <div id='right-box'>
-	<h2>Felix Nwaka</h2>
-	<h4>Software Developer</h4>
+        <h2>Felix Nwaka</h2>
+        <h4>Software Developer</h4>
       </div>
       <div id='left-box'>
-	<p>Software Developer with over <strong>2 years </strong>of experience specializing in developing <strong>Software Solutions and Web Services</strong>. </p>
-	<p>I am proficient in the use of Web Technologies to provide Effective and Professional web solutions. </p>
-	<p>With an in-depth Knowledge of, and a High Aptitude in, both Python and Javascript, Development of Web Infrastructure with Django, Flask, Node, Express, MongoDb, Postgres and other web framworks feels natural.</p>
-	<p>I love learning and adapting to tasks that provide the opportunity to learn something new and create something better.</p>
+        <p>Software Developer with over <strong>2 years </strong>of experience specializing in developing <strong>Software Solutions and Web Services</strong>. </p>
+        <p>I am proficient in the use of Web Technologies to provide Effective and Professional web solutions. </p>
+        <p>With an in-depth Knowledge of, and a High Aptitude in, both Python and Javascript, Development of Web Infrastructure with Django, Flask, Node, Express, MongoDb, Postgres and other web framworks feels natural.</p>
+        <p>I love learning and adapting to tasks that provide the opportunity to learn something new and create something better.</p>
       </div>
     </div>
     <div id='second-container'>
       <div id='left-section'>
-	<div>
-	  <h5>Personal Info</h5>
-	  <hr/>
-	  <p><strong>phone</strong></p>
-	  <p>+234-913-122-1212</p>
-	  <p><strong>e-mail</strong></p>
-	  <p>d.bugger.256@gmail.com</p>
-	  <p><strong>Github</strong></p>
-	  <a href='https://www.github.com/wednesday-256'style='text-decoration:none;'>@wednesday-256</a>
-	  <p><strong>Portfolio App</strong></p>
-    <a href='https://snow-globe.herokuapp.com/'>snow-globe.herokuapp.com</a>
-	</div>
-	<div>
-	  <h5>Key skills</h5>
-	  <hr/>
-	  <p>Full stack Web Developer</p>
-	  <p>Python Developer</p>
-	  <p>Javascript Developer</p>
-	</div>
-	<div>
-	  <h5>Language Proficiency</h5>
-	  <hr/>
-	  <div class='lang'>
-	    <p>HTML</p>
-	    <div id='html-bar'></div>
-	  </div>
-	  <div class='lang'>
-	    <p>CSS</p>
-	    <div id='css-bar'></div>
-	  </div>
-	  <div class='lang'>
-	    <p>Javascript</p>
-	    <div id='js-bar'></div>
-	  </div>
-	  <div class='lang'>
-	    <p>PYTHON</p>
-	    <div id='py-bar'></div>
-	  </div>
-	</div>
+        <div>
+          <h5>Personal Info</h5>
+          <hr/>
+          <p><strong>phone</strong></p>
+          <p style='font-family: monospace; font-size:15px;'>+234-913-122-1212</p>
+          <p><strong>e-mail</strong></p>
+          <a href='mailto:d.bugger.256@gmail.com'>d.bugger.256@gmail.com</a>
+          <p><strong>Github</strong></p>
+          <a href='https://www.github.com/wednesday-256'style='text-decoration:none;'>@wednesday-256</a>
+          <p><strong>Portfolio App</strong></p>
+          <a href='https://snow-globe.herokuapp.com/'>snow-globe.herokuapp.com</a>
+        </div>
+        <div id='key-skill'>
+          <h5>Key skills</h5>
+          <hr/>
+          <p>Full stack Web Developer</p>
+          <p>Python Developer</p>
+          <p>Javascript Developer</p>
+          <p>Positive Team Member</p>
+          <p>Intuitive Learner</p>
+          <p>Good attention to detail</p>
+          <p>Creative problem solver</p>
+          <p>Highly Adaptable</p>
+        </div>
+        <div>
+          <h5>Language Proficiency</h5>
+          <hr/>
+          <div class='lang'>
+            <p>HTML</p>
+            <div id='html-bar'></div>
+          </div>
+          <div class='lang'>
+            <p>CSS</p>
+            <div id='css-bar'></div>
+          </div>
+          <div class='lang'>
+            <p>Javascript</p>
+            <div id='js-bar'></div>
+          </div>
+          <div class='lang'>
+            <p>PYTHON</p>
+            <div id='py-bar'></div>
+          </div>
+        </div>
       </div>
       <div id='right-section'>
-	<div id='experience-box'>
-	  <div id='badge'>
-	    <div class='trap-box'></div>
-	    <div class='rec-box'></div>
-	    <div class='tri-box'></div>
-	  </div>
-	  <div id='cont'>
-	    <h5>Experience</h5>
-	    <hr />
-	    <div>
-	      <div class='text-content'>
-	      <div><p><strong>2020-3 - Present</strong></p></div>
-	      <div class='right-text'>
-		<h4> Freelance Python Developer</h4>
-		<p>3D catering services, Magboro, Ogun State, NG</p>
-		<p><strong>Development Tasks:</strong></p>
-		<ul>
-		  <li>Creating, Improving and Developing POS system.</li>
-		  <li>Creating a Staff Management System.</li>
-		</ul>
-	      </div>
-	      </div>
-	      <div class='text-content'>
-	      <div><p><strong>2019-2 - 2020-3</strong></p></div>
-	      <div class='right-text'>
-		<h4> Front-End Developer</h4>
-		<p>Freelance Jobs</p>
-		<p><strong>Development Tasks:</strong></p>
-		<ul>
-		  <li>Creating Blog pages.</li>
-		  <li>Creating E-commerce websites.</li>
-		  <li>Code documentation and management process.</li>
-		</ul>
-	      </div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<div id='experience-box'>
-	  <div id='badge'>
-	    <div class='trap-box'></div>
-	    <div class='rec-box'></div>
-	    <div class='tri-box'></div>
-	  </div>
-	  <div id='cont'>
-	    <h5>Education</h5>
-	    <hr />
-	    <div class='text-content'>
-	      <div><p>2015-3 - Present</p></div>
-	      <div class='right-text'>
-		<p><strong>Youtube Videos, W3schools.</strong></p>
-		<p><strong>FreeCodeCamp Tutorials.</strong></p>
-		<p><strong>Stackoverflow, Reddit.</strong></p>
-		<p><strong>Online Research</strong></p>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+        <div id='experience-box'>
+          <div id='badge'>
+            <div class='trap-box'></div>
+            <div class='rec-box'></div>
+            <div class='tri-box'></div>
+          </div>
+          <div id='cont'>
+            <h5>Experience</h5>
+            <hr />
+            <div>
+              <div class='text-content'>
+                <div><p><strong>2020-3 - Present</strong></p></div>
+                <div class='right-text'>
+                  <h4> Freelance Python Developer</h4>
+                  <p>3D catering services, Magboro, Ogun State, NG</p>
+                  <p><strong>Development Tasks:</strong></p>
+                  <ul>
+                    <li>Creating, Improving and Developing POS system.</li>
+                    <li>Creating a Staff Management System.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class='text-content'>
+                <div><p><strong>2019-2 - 2020-3</strong></p></div>
+                <div class='right-text'>
+                  <h4> Front-End Developer</h4>
+                  <p>Freelance Jobs</p>
+                  <p><strong>Development Tasks:</strong></p>
+                  <ul>
+                    <li>Creating Blog pages.</li>
+                    <li>Creating E-commerce websites.</li>
+                    <li>Code documentation and management process.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='experience-box'>
+          <div id='badge'>
+            <div class='trap-box'></div>
+            <div class='rec-box'></div>
+            <div class='tri-box'></div>
+          </div>
+          <div id='cont'>
+            <h5>Education</h5>
+            <hr />
+            <div class='text-content'>
+              <div><p>2015-3 - Present</p></div>
+              <div class='right-text'>
+                <p><strong>Youtube Videos, W3schools.</strong></p>
+                <p><strong>FreeCodeCamp Tutorials.</strong></p>
+                <p><strong>Stackoverflow, Reddit.</strong></p>
+                <p><strong>Online Research</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='familiar-box'>
+          <div id='badge'>
+            <div class='trap-box'></div>
+            <div class='rec-box'></div>
+            <div class='tri-box'></div>
+          </div>
+          <div>
+            <h5>Familiar Technologies</h5>
+            <hr />
+            <div id='fam-cont'>
+              <p><strong>Git</strong></p>
+              <p><strong>Django</strong></p>
+              <p><strong>Flask</strong></p>
+              <p><strong>Express</strong></p>
+              <p><strong>Node</strong></p>
+              <p><strong>React</strong></p>
+              <p><strong>MongoDB (via mongoose)</strong></p>
+              <p><strong>SQL</strong></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-      <p style='text-align:center; margin-top:50px; font-size:12px;'>Achieved via HTML, CSS, Javascript</p>
+    <p style='text-align:center; margin-top:50px; font-size:12px;'>Achieved via HTML, CSS, Javascript</p>
   </body>
   <script>
     const obj_lst = [
@@ -257,10 +313,10 @@
       let cont = document.getElementById(obj.id)
       cont.classList.add('bar-cont')
       for (let i= 0;i < obj.score; i++){
-	ele += "<div class='bar'></div>"
+        ele += "<div class='bar'></div>"
       }
       for (let i=0; i< (5-obj.score);i++){
-	ele+="<div class='emp-bar'></div>"
+        ele+="<div class='emp-bar'></div>"
       }
       cont.innerHTML = ele
     }
