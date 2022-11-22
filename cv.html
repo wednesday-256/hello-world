@@ -1,195 +1,248 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">	
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
     <title>Felix's CV</title>
   </head>
-  <style> 
-html {
-  scroll-behavior: smooth;
-}
-  h2 {
-    font-size: 30px;
-    color: #3a4364;
-  }
-  h5 {
-    font-size: 20px;
-    color: #3a4364;
-  }
-  h4 {
-    font-size: 17px;
-    color:#3a4364;
-  }
-  a {
-    text-transform: lowercase;
-  }
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    h2 {
+      font-size: 30px;
+      color: #3a4364;
+    }
+    h5 {
+      font-size: 20px;
+      color: #3a4364;
+      margin: 10px 0px;
+    }
+    h4 {
+      font-size: 17px;
+      color: #3a4364;
+    }
+    a {
+      text-transform: lowercase;
+    }
 
-  body{
-    height:100%;
-    margin-left: 10px;
-  }
-  .lang {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #first-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    align-items: baseline;
-  }
-  @media screen and (min-width: 1145px){
+    body {
+      height: 100%;
+      /* margin-left: 10px; */
+    }
+    .lang {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     #first-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 10px;
+      align-items: baseline;
+    }
+    @media screen and (min-width: 1145px) {
+      #first-container {
+        justify-content: space-evenly;
+      }
+    }
+
+    #right-box {
+      max-width: 60%;
+    }
+    .cont {
+      margin-top: 20px;
+    }
+    #key-skill {
+      text-transform: uppercase;
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    #second-container {
+      text-transform: capitalize;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: baseline;
+      padding: 2px 10px;
+    }
+    .date-text {
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 1.2em;
+    }
+    #left-section {
+      margin-right: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .experience-box,
+    #familiar-box {
+      display: flex;
+      justify-content: flex-start;
+    }
+    #fam-cont {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      color: #3a4364;
       justify-content: space-evenly;
     }
-  }
-  #left-box {
-    max-width: 50%;
-  }
-  #cont {
-    margin-top: 10px;
-  }
-  #key-skill{
-    text-transform: uppercase;
-    font-family: monospace;
-    font-size: 15px;
-  }
-
-  #second-container {
-    text-transform: capitalize;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
-    padding: 10px;
-  }
-  #left-section {
-    margin-right: 25px;
-    display:flex;
-    flex-direction: column;
-    justify-content:space-between;
-  }
-  #experience-box, #familiar-box {
-    display: flex;
-    justify-content:flex-start;
-  }
-  #fam-cont {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color:#3a4364;
-    justify-content: space-evenly;
-  }
-  #fam-cont p{ 
-    margin-left:20px;
-    margin-right:20px;
-  }
-
-  #badge {
-    display: flex;
-    position: relative;
-    justify-content:flex-start;
-    margin-right: 25px;
-  }
-  .tri-box {
-    width:0;
-    height:0;
-    border-top: 25px solid transparent;
-    border-left: 15px solid #3a4364;    
-    position: absolute;
-    left:35px;
-
-  }
-  .trap-box {
-    height: 0;
-    width: 35px;
-    transform: rotate(-90deg);
-    border-bottom: 20px solid #3a4364;
-    border-left: 15px solid transparent;
-    position: absolute;
-    left:-16px;
-    top: 17px;
-  }
-  .rec-box {
-    height: 25px;
-    width: 35px;
-    background-color: #3a4364;
-  }
-  .text-content {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    align-items: center;
-  }
-  .bar {
-    height: 13px;
-    width: 10px;
-    background-color: #3a4364;
-    margin: 3px;
-  }
-  .emp-bar {
-    height: 13px;
-    width: 10px;
-    background-color: #cacaca;
-    margin: 3px;
-
-  }
-  .bar-cont {
-    display:flex;
-    justify-content:space-evenly;
-  }
-  .right-text {
-    margin-left: 20px;
-    width: 100%;
-    flex-grow: 1;
-  }
-  hr {
-    width: 100%;
-  }
-  @media only screen and (max-width:600px){
-    #first-container, #second-container{
-      flex-direction: column;
+    #fam-cont p {
+      margin-left: 20px;
+      margin-right: 20px;
     }
-    #left-box {
-      max-width: 100%;
+    .info-cont p {
+      margin: 5px 0px;
     }
-    #left-section{
-      margin-bottom: 35px
+    .info-cont {
+      margin-bottom: 1.2em;
     }
-  }
 
+    .badge {
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      margin-right: 25px;
+    }
+    .tri-box {
+      width: 0;
+      height: 0;
+      border-top: 25px solid transparent;
+      border-left: 15px solid #3a4364;
+      position: absolute;
+      left: 35px;
+    }
+    .trap-box {
+      height: 0;
+      width: 35px;
+      transform: rotate(-90deg);
+      border-bottom: 20px solid #3a4364;
+      border-left: 15px solid transparent;
+      position: absolute;
+      left: -16px;
+      top: 17px;
+    }
+    .rec-box {
+      height: 25px;
+      width: 35px;
+      background-color: #3a4364;
+    }
+    .text-content {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      align-items: center;
+    }
+    .bar {
+      height: 13px;
+      width: 10px;
+      background-color: #3a4364;
+      margin: 3px;
+    }
+    .emp-bar {
+      height: 13px;
+      width: 10px;
+      background-color: #cacaca;
+      margin: 3px;
+    }
+    .bar-cont {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .right-text {
+      margin-left: 20px;
+      width: 100%;
+      flex-grow: 1;
+    }
+    hr {
+      width: 100%;
+    }
+    @media only screen and (max-width: 600px) {
+      #first-container,
+      #second-container {
+        flex-direction: column;
+      }
+      #right-box {
+        max-width: 100%;
+      }
+      #left-section {
+        margin-bottom: 35px;
+        width: 100%;
+      }
+      .badge {
+        display: none;
+      }
+    }
   </style>
   <body>
-    <div id='first-container'>
-      <div id='right-box'>
+    <div id="first-container">
+      <div id="left-box">
         <h2>Felix Nwaka</h2>
         <h4>Software Developer</h4>
       </div>
-      <div id='left-box'>
-        <p>Software Developer with over <strong>2 years </strong>of experience specializing in developing <strong>Software Solutions and Web Services</strong>. </p>
-        <p>I am proficient in the use of Web Technologies to provide Effective and Professional web solutions. </p>
-        <p>With an in-depth Knowledge of, and a High Aptitude in, both Python and Javascript, Development of Web Infrastructure with Django, Flask, Node, Express, MongoDb, Postgres and other web framworks feels natural.</p>
-        <p>I love learning and adapting to tasks that provide the opportunity to learn something new and create something better.</p>
+      <div id="right-box">
+        <p>
+          Software Developer with over <strong>2 years </strong>of experience
+          specializing in developing
+          <strong>Software Solutions and Web Services</strong>.
+        </p>
+        <p>
+          I am proficient in the use of Web Technologies to provide Effective
+          and Professional web solutions.
+        </p>
+        <p>
+          With an in-depth Knowledge of, and a High Aptitude in, both Python and
+          Javascript, Development of Web Infrastructure with Django, Flask,
+          Node, Express, MongoDb, Postgres and other web framworks feels
+          natural.
+        </p>
+        <p>
+          I love learning, adapting to tasks that provide the opportunity to
+          implement new skills and create sustainable solutions.
+        </p>
       </div>
     </div>
-    <div id='second-container'>
-      <div id='left-section'>
-        <div>
-          <h5>Personal Info</h5>
-          <hr/>
-          <p><strong>phone</strong></p>
-          <p style='font-family: monospace; font-size:15px;'>+234-913-122-1212</p>
-          <p><strong>e-mail</strong></p>
-          <a href='mailto:d.bugger.256@gmail.com'>d.bugger.256@gmail.com</a>
-          <p><strong>Github</strong></p>
-          <a href='https://www.github.com/wednesday-256'style='text-decoration:none;'>@wednesday-256</a>
-          <p><strong>Portfolio App</strong></p>
-          <a href='https://snow-globe.herokuapp.com/'>snow-globe.herokuapp.com</a>
+    <div id="second-container">
+      <div id="left-section">
+        <div id="p-info">
+          <div>
+            <h5>Personal Info</h5>
+            <hr />
+          </div>
+          <div class="info-cont">
+            <p><strong>phone</strong></p>
+            <p style="font-family: monospace; font-size: 15px;">
+              +234-913-122-1212
+            </p>
+          </div>
+          <div class="info-cont">
+            <p><strong>e-mail</strong></p>
+            <a target="_blank" href="mailto:d.bugger.256@gmail.com"
+              >d.bugger.256@gmail.com</a
+            >
+          </div>
+          <div class="info-cont">
+            <p><strong>Github</strong></p>
+            <a
+              target="_blank"
+              href="https://www.github.com/wednesday-256"
+              style="text-decoration: none;"
+              >@wednesday-256</a
+            >
+          </div>
+          <div class="info-cont">
+            <p><strong>Portfolio App</strong></p>
+            <a target="_blank" href="https://snow-globe.herokuapp.com/"
+              >snow-globe.herokuapp.com</a
+            >
+          </div>
         </div>
-        <div id='key-skill'>
+        <div id="key-skill">
           <h5>Key skills</h5>
-          <hr/>
+          <hr />
           <p>Full stack Web Developer</p>
           <p>Python Developer</p>
           <p>Javascript Developer</p>
@@ -201,44 +254,46 @@ html {
         </div>
         <div>
           <h5>Language Proficiency</h5>
-          <hr/>
-          <div class='lang'>
+          <hr />
+          <div class="lang">
             <p>HTML</p>
-            <div id='html-bar'></div>
+            <div id="html-bar"></div>
           </div>
-          <div class='lang'>
+          <div class="lang">
             <p>CSS</p>
-            <div id='css-bar'></div>
+            <div id="css-bar"></div>
           </div>
-          <div class='lang'>
+          <div class="lang">
             <p>JAVA</p>
-            <div id='jv-bar'></div>
+            <div id="jv-bar"></div>
           </div>
-          <div class='lang'>
+          <div class="lang">
             <p>Javascript</p>
-            <div id='js-bar'></div>
+            <div id="js-bar"></div>
           </div>
-          <div class='lang'>
+          <div class="lang">
             <p>Python</p>
-            <div id='py-bar'></div>
+            <div id="py-bar"></div>
           </div>
         </div>
       </div>
-      <div id='right-section'>
-        <div id='experience-box'>
-          <div id='badge'>
-            <div class='trap-box'></div>
-            <div class='rec-box'></div>
-            <div class='tri-box'></div>
+      <div id="right-section">
+        <div class="experience-box">
+          <div class="badge">
+            <div class="trap-box"></div>
+            <div class="rec-box"></div>
+            <div class="tri-box"></div>
           </div>
-          <div id='cont'>
+          <div class="cont">
             <h5>Experience</h5>
             <hr />
             <div>
-              <div class='text-content'>
-                <div><p><strong>2020-3 - Present</strong></p></div>
-                <div class='right-text'>
-                  <h4> Freelance Python Developer</h4>
+              <div class="text-content">
+                <div>
+                  <p class="date-text">2020-3 - Present</p>
+                </div>
+                <div class="right-text">
+                  <h4>Freelance Python Developer</h4>
                   <p>3D catering services, Magboro, Ogun State, NG</p>
                   <p><strong>Development Tasks:</strong></p>
                   <ul>
@@ -247,10 +302,12 @@ html {
                   </ul>
                 </div>
               </div>
-              <div class='text-content'>
-                <div><p><strong>2019-2 - 2020-3</strong></p></div>
-                <div class='right-text'>
-                  <h4> Front-End Developer</h4>
+              <div class="text-content">
+                <div>
+                  <p class="date-text">2019-2 - 2020-3</p>
+                </div>
+                <div class="right-text">
+                  <h4>Front-End Developer</h4>
                   <p>Freelance Jobs</p>
                   <p><strong>Development Tasks:</strong></p>
                   <ul>
@@ -263,29 +320,45 @@ html {
             </div>
           </div>
         </div>
-        <div id='experience-box'>
-          <div id='badge'>
-            <div class='trap-box'></div>
-            <div class='rec-box'></div>
-            <div class='tri-box'></div>
+        <div class="experience-box">
+          <div class="badge">
+            <div class="trap-box"></div>
+            <div class="rec-box"></div>
+            <div class="tri-box"></div>
           </div>
-          <div id='cont'>
+          <div class="cont">
             <h5>Education</h5>
             <hr />
             <div>
-              <div class='text-content'>
-                <div><p> 2021 </p></div>
-                <div class='right-text'>
-                  <p><strong>Advanced Diploma In Software Engineering</strong></p>
+              <div class="text-content">
+                <div><p class="date-text">2021</p></div>
+                <div class="right-text">
+                  <p>
+                    <strong>Advanced Diploma In Software Engineering</strong>
+                  </p>
                   <p><em>Aptech Computer Education.</em></p>
                   <ul>
-                    <li><strong>Grade: </strong> <a title='click to see certificate' href='https://wednesday-256.github.io/hello-world/adse_cert.pdf' target="_blank" style='text-transform:uppercase; color:green;'> Distinction.</a></li>
+                    <li>
+                      <strong>Grade: </strong>
+                      <a
+                        title="Click to see certificate"
+                        href="https://wednesday-256.github.io/hello-world/adse_cert.pdf"
+                        target="_blank"
+                        style="
+                          text-transform: uppercase;
+                          color: green;
+                          font-weight: bold;
+                        "
+                      >
+                        Distinction.</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
-              <div class='text-content'>
-                <div><p>2015-3 - Present</p></div>
-                <div class='right-text'>
+              <div class="text-content">
+                <div><p class="date-text">2015-3 - Present</p></div>
+                <div class="right-text">
                   <p><strong>Youtube Videos, W3schools.</strong></p>
                   <p><strong>FreeCodeCamp Tutorials.</strong></p>
                   <p><strong>Stackoverflow, Reddit.</strong></p>
@@ -295,16 +368,16 @@ html {
             </div>
           </div>
         </div>
-        <div id='familiar-box'>
-          <div id='badge'>
-            <div class='trap-box'></div>
-            <div class='rec-box'></div>
-            <div class='tri-box'></div>
+        <div id="familiar-box">
+          <div class="badge">
+            <div class="trap-box"></div>
+            <div class="rec-box"></div>
+            <div class="tri-box"></div>
           </div>
-          <div>
+          <div class="cont">
             <h5>Familiar Technologies</h5>
             <hr />
-            <div id='fam-cont'>
+            <div id="fam-cont">
               <p><strong>Git</strong></p>
               <p><strong>Django</strong></p>
               <p><strong>Linux</strong></p>
@@ -320,25 +393,30 @@ html {
         </div>
       </div>
     </div>
-    <p style='text-align:center; margin-top:50px; font-size:12px;'>Achieved via HTML, CSS, Javascript</p>
+    <p style="text-align: center; margin-top: 50px; font-size: 12px;">
+      Achieved via HTML, CSS, Javascript
+    </p>
   </body>
   <script>
     const obj_lst = [
-      {id: 'jv-bar', score:3}, {id: 'html-bar', score:3}, {id:'css-bar', score:3}, {id: 'js-bar', score:4}, {id:'py-bar', score:4}
-    ]
+      { id: "jv-bar", score: 3 },
+      { id: "html-bar", score: 3 },
+      { id: "css-bar", score: 3 },
+      { id: "js-bar", score: 4 },
+      { id: "py-bar", score: 4 },
+    ];
     const populate = (obj) => {
-      let ele ="" 
-      let cont = document.getElementById(obj.id)
-      cont.classList.add('bar-cont')
-      for (let i= 0;i < obj.score; i++){
-        ele += "<div class='bar'></div>"
+      let ele = "";
+      let cont = document.getElementById(obj.id);
+      cont.classList.add("bar-cont");
+      for (let i = 0; i < obj.score; i++) {
+        ele += "<div class='bar'></div>";
       }
-      for (let i=0; i< (5-obj.score);i++){
-        ele+="<div class='emp-bar'></div>"
+      for (let i = 0; i < 5 - obj.score; i++) {
+        ele += "<div class='emp-bar'></div>";
       }
-      cont.innerHTML = ele
-    }
-    obj_lst.forEach(populate)
+      cont.innerHTML = ele;
+    };
+    obj_lst.forEach(populate);
   </script>
 </html>
-
